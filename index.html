@@ -5,16 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div class="auth-container"></div>
     <div class="container">
-        <div class="pane pane1">1</div>
-        <div class="pane pane2"><img src="https://media3.giphy.com/media/iDJQRjTCenF7A4BRyU/giphy.gif?cid=021aea08dhb71c4pws34xkce34prvkwveycgr4fstdk5g5ok&rid=giphy.gif&ct=g" alt=""></div>
-        <div class="pane pane3">3</div>
-        <div class="pane pane4">4</div>
+        <div class="sidebar">
+            <li id="dashboardBtn" class="item active">
+                <i id="dashboardBtn" class="center fas fa-th-large"></i>
+            </li>
+            <li id="settingsBtn" class="item">
+                <i id="settingsBtn" class="center fas fa-cog"></i>
+            </li>
+        </div>
+        <div class="header">
+            <h1 id="title">Dashboard</h1>
+            <i id="themeBtn" class="vertical-align fas fa-sliders-h"></i>
+            <i id="logoutBtn" class="vertical-align fas fa-sign-out-alt"></i>
+            <div class="theme-popup hide">
+                <span class="theme-1"></span>
+                <span class="theme-2"></span>
+                <span class="theme-3"></span>
+                <span class="theme-4"></span>
+                <span class="theme-5"></span>
+                <span class="theme-6"></span>
+                <span class="theme-7"></span>
+                <span class="theme-8"></span>
+                <span class="theme-9"></span>
+            </div>
+        </div>
+        <div class="body">
+            <div class="main">
+                <div id="weather"></div>
+                <div id="tide"></div>
+                <div id="movies"></div>
+                <div id="todolist"></div>
+            </div>
+            <div class="settings">
+                <div>
+                    <h3 class="vertical-align">Location</h3> 
+                    <input 
+                        id="location-input" 
+                        type="text"
+                        value=""
+                        placeholder="Enter a location. . ."
+                    />
+                </div>
+                <button id="save-settings">Save</button>
+            </div>
+        </div>
     </div>
-
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js" type="module"></script>
+    <!-- SCRIPTS -->
 </body>
 </html>

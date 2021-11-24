@@ -10,7 +10,7 @@
  */
 
 import { M3O_TOKEN } from './constants.js'
-import { apiClientWithToken } from './apiClient.js'
+import { apiClientWithToken } from './apiclient.js'
 
 class Database {
 
